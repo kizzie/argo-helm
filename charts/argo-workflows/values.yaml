@@ -408,6 +408,15 @@ controller:
   # @default -- `5s` (Argo Workflows default)
   podGCDeleteDelayDuration: ""
 
+  # -- workflowRestrictions are disabled by default, enable these and set either Strict or Secure - https://argo-workflows.readthedocs.io/en/latest/workflow-restrictions/
+  workflowRestrictions:
+    # # Enable the workflow restrictions
+    # # @default -- false (Argo Workflows default)
+    enabled: false
+    # # Must be one of Strict, or Secure
+    # @default -- 'Strict' - must be either strict or secure
+    value: Strict
+
 # mainContainer adds default config for main container that could be overriden in workflows template
 mainContainer:
   # -- imagePullPolicy to apply to Workflow main container. Defaults to `.Values.images.pullPolicy`.

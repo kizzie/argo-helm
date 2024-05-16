@@ -233,6 +233,7 @@ Fields to note:
 | controller.volumes | list | `[]` | Additional volumes to the controller pod |
 | controller.workflowDefaults | object | `{}` | Default values that will apply to all Workflows from this controller, unless overridden on the Workflow-level. Only valid for 2.7+ |
 | controller.workflowNamespaces | list | `["default"]` | Specify all namespaces where this workflow controller instance will manage workflows. This controls where the service account and RBAC resources will be created. Only valid when singleNamespace is false. |
+| controller.workflowRestrictions | object | `{"enabled":false,"value":"Strict"}` | workflowRestrictions are disabled by default, enable these and set either Strict or Secure - https://argo-workflows.readthedocs.io/en/latest/workflow-restrictions/ |
 | controller.workflowRestrictions | object | `{}` | Restricts the Workflows that the controller will process. Only valid for 2.9+ |
 | controller.workflowTTLWorkers | string | `nil` | Number of workflow TTL workers |
 | controller.workflowWorkers | string | `nil` | Number of workflow workers |
